@@ -149,7 +149,43 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 13: 
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int max(int num1, int num2)
+{
+    if(num1 > num2)
+        return num1;
+    else
+        return num2;
+}
+
+int min(int num1, int num2)
+{
+    if(num1 > num2)
+        return num2;
+    else
+        return num1;
+}
+
+int main()
+{
+    int num1, num2, maximum, minimum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    maximum = max(num1, num2);
+    minimum = min(num1, num2);
+
+    printf("Maximum = %d\n", maximum);
+    printf("Minimum = %d\n", minimum);
+
+    return 0;
+}
+~~~
 # Output:
+<img width="617" height="245" alt="Screenshot 2026-03-24 214030" src="https://github.com/user-attachments/assets/9968521d-d20f-45a3-924f-a3079a8cee75" />
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -200,40 +236,48 @@ Thus, the program was implemented and executed successfully, and the required ou
 ~~~
 #include <stdio.h>
 
-int max(int num1, int num2)
-{
-    if(num1 > num2)
-        return num1;
-    else
-        return num2;
-}
-
-int min(int num1, int num2)
-{
-    if(num1 > num2)
-        return num2;
-    else
-        return num1;
-}
+float celtof();
+float ftocel();
 
 int main()
 {
-    int num1, num2, maximum, minimum;
+    float F, C;
 
-    printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
+    F = celtof();
+    printf("Fahrenheit: %.2f\n", F);
 
-    maximum = max(num1, num2);
-    minimum = min(num1, num2);
-
-    printf("Maximum = %d\n", maximum);
-    printf("Minimum = %d\n", minimum);
+    C = ftocel();
+    printf("Celsius: %.2f\n", C);
 
     return 0;
 }
+
+float celtof()
+{
+    float C, F;
+
+    printf("Enter the temperature in Celsius: ");
+    scanf("%f", &C);
+
+    F = (C * 9 / 5) + 32;
+
+    return F;
+}
+
+float ftocel()
+{
+    float f, celsius;
+
+    printf("Enter the temperature in Fahrenheit: ");
+    scanf("%f", &f);
+
+    celsius = (f - 32) * 5 / 9;
+
+    return celsius;
+}
 ~~~
 # Output:
-<img width="617" height="245" alt="Screenshot 2026-03-24 214030" src="https://github.com/user-attachments/assets/9968521d-d20f-45a3-924f-a3079a8cee75" />
+<img width="621" height="314" alt="Screenshot 2026-03-24 215424" src="https://github.com/user-attachments/assets/0adb6a7e-cb41-49fd-ad9e-4d50e15fe829" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
